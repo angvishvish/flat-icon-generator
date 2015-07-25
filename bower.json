@@ -1,0 +1,25 @@
+{
+  "name": "flat-icon-generator",
+  "version": "0.0.1",
+  "homepage": "https://github.com/angvishvish/flat-icon-generator",
+  "description": "A flat icon generator, using angularjs material design",
+  "authors": [
+    "angvishvish"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "bootstrap-sass": "~3.3.4",
+    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-watch": "~0.6.1",
+    "angular": "~1.4.3",
+    "angular-jquery": "~0.2.1"
+  }
+}

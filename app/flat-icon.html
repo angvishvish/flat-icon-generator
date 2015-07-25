@@ -1,0 +1,40 @@
+<md-content layout-padding class="md-whiteframe-z1">
+  <div layout>
+    <md-select offset="33" flex="33" placeholder="Font awesone icons" ng-model="faIcon" class="display-b">
+      <md-option ng-repeat="(key, value) in icons" value="{{ key }}">
+        {{ value }} - <i class="fa {{ key }} pull-right"></i>
+      </md-option>
+    </md-select>
+  </div>
+  
+  <!-- icon container -->
+  <div layout="column" layout-fill layout layout-align="center center">
+    <i ng-show="faIcon" class="fa fa-5x text-shadow {{ faIcon }}"></i>
+    <i ng-hide="faIcon" class="fa fa-paper-plane fa-5x text-shadow"></i>
+  </div>
+
+  <!-- range selectors -->
+  <div layout flex>
+    <h3 flex="33">Select Color range</h3>
+    <div flex="66">
+      <div layout>
+        <div flex="33">
+          <md-slider ng-change="onTextShadow()" flex md-discrete ng-model="color.red" min="0" max="255" aria-label="red" id="red-slider" class="md-warn">
+          </md-slider>
+        </div>
+        <div layout flex="33">
+          <md-slider ng-change="onTextShadow()" flex md-discrete ng-model="color.green" min="0" max="255" aria-label="green" class="md-green">
+          </md-slider>
+        </div>
+        <div flex="33">
+          <md-slider ng-change="onTextShadow()" flex md-discrete ng-model="color.blue" min="0" max="255" aria-label="blue" class="md-primary">
+          </md-slider>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div layout flex>
+    <h3 flex="33">Select shadow range</h3>
+    <md-slider flex="66" class="md-primary" md-discrete ng-model="shadowDepth" step="1" min="1" max="100" aria-label="Shawdow depth" ng-change="onTextShadow()"></md-slider>
+  </div>
+</md-content>
